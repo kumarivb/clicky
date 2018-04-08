@@ -1,2 +1,0 @@
-# clicky
-React memory game
