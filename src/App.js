@@ -1,21 +1,33 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import ImageCard from "./components/ImageCard";
+import Wrapper from "./components/Wrapper";
+import Title from "./components/Title";
+import images from "./images.json";
+import "./App.css";
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
-}
+    state = {
+        images
+    };
+
+    // shuffle
+
+    // map
+    render() {
+        return (
+            <Wrapper>
+                <Title>Memory Game</Title>
+                {this.state.images.map(image => (
+                    <ImageCard
+                        id={image.id}
+                        key={image.id}
+                        name={image.name}
+                        image={image.imgPath}
+                    />
+                ))}
+            </Wrapper>
+        );
+    }
+};
 
 export default App;

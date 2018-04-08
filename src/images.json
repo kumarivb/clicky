@@ -2,61 +2,61 @@
     {
         "id": 1,
         "name": "Gunther",
-        "imgPath": "%PUBLIC_URL%/images/gunther.jpg"
+        "imgPath": "./images/gunther.jpg"
     },
     {
         "id": 2,
         "name": "Jake",
-        "imgPath": "%PUBLIC_URL%/images/jake.jpg"
+        "imgPath": "./images/jake.jpg"
     },
     {
         "id": 3,
         "name": "John",
-        "imgPath": "%PUBLIC_URL%/images/john.jpg"
+        "imgPath": "./images/john.jpg"
     },
     {
         "id": 4,
         "name": "Lee",
-        "imgPath": "%PUBLIC_URL%/images/lee.png"
+        "imgPath": "./images/lee.png"
     },
     {
         "id": 5,
         "name": "Olivia",
-        "imgPath": "%PUBLIC_URL%/images/olivia.jpg"
+        "imgPath": "./images/olivia.jpg"
     },
     {
         "id": 6,
         "name": "Paul",
-        "imgPath": "%PUBLIC_URL%/images/paul.jpg"
+        "imgPath": "./images/paul.jpg"
     },
     {
         "id": 7,
         "name": "Sam",
-        "imgPath": "%PUBLIC_URL%/images/sam.png"
+        "imgPath": "./images/sam.png"
     },
     {
         "id": 8,
         "name": "Samantha",
-        "imgPath": "%PUBLIC_URL%/images/samantha.jpg"
+        "imgPath": "./images/samantha.jpg"
     },
     {
         "id": 9,
         "name": "Seth",
-        "imgPath": "%PUBLIC_URL%/images/seth.jpg"
+        "imgPath": "./images/seth.jpg"
     },
     {
         "id": 10,
         "name": "Sherwood",
-        "imgPath": "%PUBLIC_URL%/images/sherwood.jpg"
+        "imgPath": "./images/sherwood.jpg"
     },
     {
         "id": 11,
         "name": "Tony",
-        "imgPath": "%PUBLIC_URL%/images/tony.jpg"
+        "imgPath": "./images/tony.jpg"
     },
     {
         "id": 12,
         "name": "Zack",
-        "imgPath": "%PUBLIC_URL%/images/zack.jpg"
+        "imgPath": "./images/zack.jpg"
     }
 ]

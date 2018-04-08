@@ -6,8 +6,10 @@ const ImageCard = props => (
         <div className="imgContainer">
             <img alt={props.name} src={props.image} />
         </div>
-        <span onClick={() => props.shuffleImage(props.id)} className="shuffle">
+        {/* <span onClick={() => props.shuffleImage(props.id)} className="shuffle">
             𝘅
-        </span>
+        </span> */}
     </div>
 );
+
+export default ImageCard;
