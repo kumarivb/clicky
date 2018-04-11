@@ -4,11 +4,8 @@ import "./ImageCard.css";
 const ImageCard = props => (
     <div className="card">
         <div className="imgContainer">
-            <img alt={props.name} src={props.image} />
+            <img alt={props.name} src={props.image} onClick={() => props.imgClick(props.id)} />
         </div>
-        {/* <span onClick={() => props.shuffleImage(props.id)} className="shuffle">
-            𝘅
-        </span> */}
     </div>
 );
 
