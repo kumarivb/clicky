@@ -21,8 +21,8 @@ class App extends Component {
                         key={image.id}
                         name={image.name}
                         image={image.imgPath}
+                        shuffle={() => {this.shuffle(this.state.images)}}
                         /* click */
-                        /* shuffle */
                     />
                 ))}
             </Wrapper>
@@ -31,18 +31,14 @@ class App extends Component {
 
     // shuffle
     shuffle = array => {
-        for (let i = array.length - 1; i > 0)
+        for (let i = array.length - 1; i > 0; i--) {
+            let j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        this.setState({ images:images});
     }
 };
 
-// shuffle
-// shuffle
-function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        let j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-}
-// score
-
 export default App;
+
+// score
