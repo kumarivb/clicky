@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import ImageCard from "./components/ImageCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
-import images from "./images.json";
+import Images from "./Images.json";
 import "./App.css";
 
 class App extends Component {
     state = {
-        images: images
+        Images: Images
     };
 
     // map
@@ -15,14 +15,14 @@ class App extends Component {
         return (
             <Wrapper>
                 <Title>Memory Game</Title>
-                {this.state.images.map(image => (
+                {this.state.Images.map(image => (
                     <ImageCard
                         id={image.id}
                         key={image.id}
                         name={image.name}
                         image={image.imgPath}
-                        shuffle={() => {this.shuffle(this.state.images)}}
-                        /* click */
+                        shuffle={() => {this.shuffle(this.state.Images)}}
+                        imgClick={() => {this.shuffle(this.state.Images)}}
                     />
                 ))}
             </Wrapper>
@@ -35,7 +35,7 @@ class App extends Component {
             let j = Math.floor(Math.random() * (i + 1));
             [array[i], array[j]] = [array[j], array[i]];
         }
-        this.setState({ images:images});
+        this.setState({ Images:Images});
     }
 };
 
