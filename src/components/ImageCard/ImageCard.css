@@ -1,0 +1,16 @@
+.card {
+    width: 200px;
+    position: relative;
+    text-align: center;
+    border: 0px;
+}
+  
+.imgContainer {
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+
+img {
+    width: 100%
+}

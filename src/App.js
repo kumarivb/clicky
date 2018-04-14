@@ -7,7 +7,9 @@ import "./App.css";
 
 class App extends Component {
     state = {
-        Images: Images
+        Images: Images,
+        userScore: 0,
+        topScore: 0
     };
 
     // map
@@ -15,6 +17,10 @@ class App extends Component {
         return (
             <Wrapper>
                 <Title>Memory Game</Title>
+                <header>
+                score = {this.state.score}
+                topScore = {this.state.topScore}
+                </header>
                 {this.state.Images.map(image => (
                     <ImageCard
                         id={image.id}
@@ -37,8 +43,43 @@ class App extends Component {
         }
         this.setState({ Images:Images});
     }
+    
+    // score 
+    imgClick = id => {
+        this.state.Images.forEach(image => {
+            if (image.id === id) {
+                if (image.status) {
+                    return("You clicked that one twice!", "Score: "+[this.state.userScore]+"High Score: "+[this.state.topScore], "error", {
+                        button: "Reset",
+                    });
+                    this.setState({ userScore: 0 });
+                    this.state.Images.forEach((image) => {
+                        image.status = 0;
+                    });
+                } else {
+                    this.setState((newState) => ({
+                        userScore: newState.userScore + 1
+                    }), () => {
+                        if (this.state.userScore === 10) {
+                            return("You WON!", "Score: "+[this.state.userScore]+"High Score: "+[this.state.topScore], "success", {
+                                button: "Play Again",
+                            });
+                            this.setState({userScore: 0});
+                            this.state.Images.forEach((image) => {
+                                image.status = 0;
+                            });
+                        } else {
+                            this.shuffle(this.state.Images);
+                            image.status = 1;
+                        }
+                    });
+                }
+                if (this.state.userScore >= this.state.topScore) {
+                    this.setState({topScore: this.state.userScore +1});
+                }                
+            }
+        });
+    }
 };
 
 export default App;
-
-// score
